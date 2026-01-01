@@ -1,1 +1,25 @@
-<p>hero works!</p>
+<h1>{{alterEgo}}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{nombre}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{edad}}</dd>
+
+  <td>Método</td>
+  <dd>{{ getHeroDescription() }}</dd>
+
+  <td>Capitalizado</td>
+  <dd>{{nombre | uppercase}}</dd>
+</dl>
+
+<button
+  *ngIf="alterEgo === 'Spider-man'"
+  class="btn btn-primary mx-2"
+  (click)="changeHero()">Cambiar nombre</button>
+
+<button
+  *ngIf="edad === 17"
+  class="btn btn-primary"
+  (click)="changeAge()">Cambiar edad</button>
