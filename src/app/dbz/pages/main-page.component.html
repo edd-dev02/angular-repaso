@@ -8,6 +8,7 @@
   </div>
 
   <div class="col">
-    <app-dbz-add-character></app-dbz-add-character>
+    <!-- Aqui recibimos el objeto tipo character emitido por el componente hijo -->
+    <app-dbz-add-character (onNewCharacter)="getNewCharacter($event)"></app-dbz-add-character>
   </div>
 </div>

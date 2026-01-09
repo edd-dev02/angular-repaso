@@ -10,13 +10,20 @@ export class MainPageComponent {
 
   public characters: Character[] = [
     {
-    name: "Krillin",
-    power: 3000
+      name: "Krillin",
+      power: 3000
     },
     {
       name: "Goku",
       power: 9500
     }
-];
+  ];
+
+  getNewCharacter(character: Character): void {
+    console.log(character);
+
+    this.characters.push(character);
+
+  }
 
 }
