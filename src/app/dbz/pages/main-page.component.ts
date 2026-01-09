@@ -16,13 +16,27 @@ export class MainPageComponent {
     {
       name: "Goku",
       power: 9500
-    }
+    },
+    {
+      name: "Vegeta",
+      power: 8200
+    },
+    {
+      name: "Bulma",
+      power: 10
+    },
   ];
 
   getNewCharacter(character: Character): void {
     console.log(character);
 
     this.characters.push(character);
+
+  }
+
+  getCharacterDeletedPosition(index: number): void {
+
+    this.characters.splice(index, 1);
 
   }
 
