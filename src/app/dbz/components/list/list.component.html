@@ -19,6 +19,6 @@
           <span class="text-primary"> {{ i + 1 }}.- </span> {{ character.name }} - {{ character.power }}
         </div>
 
-        <button (click)="emiteDeleteCharacter(i)" class="btn btn-danger">X</button>
+        <button (click)="emiteDeleteCharacter(character.id!)" class="btn btn-danger">X</button>
       </li>
     </ul>

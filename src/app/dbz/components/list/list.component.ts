@@ -12,9 +12,9 @@ export class ListComponent {
   public listCharacter: Character[] = [ {name: "Trunks", power: 80}];
 
   @Output()
-  public onDeleteCharacter: EventEmitter<number> = new EventEmitter();
+  public onDeleteCharacter: EventEmitter<string> = new EventEmitter();
 
-  public emiteDeleteCharacter(characterId: number): void {
+  public emiteDeleteCharacter(characterId: string): void {
 
     this.onDeleteCharacter.emit(characterId);
 
