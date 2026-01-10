@@ -4,11 +4,11 @@
 <div class="row">
   <div class="col">
     <!-- Aqui mandamos la lista desde el componente padre -->
-    <app-dbz-list (onDeleteCharacter)="dbzService.deleteCharacterById($event)" [listCharacter]="dbzService.characters"></app-dbz-list>
+    <app-dbz-list (onDeleteCharacter)="onDeleteCharacter($event)" [listCharacter]="characters"></app-dbz-list>
   </div>
 
   <div class="col">
     <!-- Aqui recibimos el objeto tipo character emitido por el componente hijo -->
-    <app-dbz-add-character (onNewCharacter)="dbzService.getNewCharacter($event)"></app-dbz-add-character>
+    <app-dbz-add-character (onNewCharacter)="getNewCharacter($event)"></app-dbz-add-character>
   </div>
 </div>
